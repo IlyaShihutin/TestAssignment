@@ -29,7 +29,7 @@ const createWindow = (): void => {
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
   ipcMain.on('save-data', (event: IpcMainEvent, newData: TodoItem) => {
     store.set('data', newData);
